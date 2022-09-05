@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next'
+
 export default function () {
+  const { t } = useTranslation('translation', { keyPrefix: 'community' })
   return (
     <section
       aria-labelledby='community'
@@ -9,18 +12,12 @@ export default function () {
           id='community'
           className='text-xs lg:text-base uppercase bg-white text-black inline-block py-2 px-5 border-2 border-black'
         >
-          Community
+          {t('title')}
         </h2>
-        <h3 className='font-bold text-3xl lg:text-4xl my-7'>
-          Join a growing community.
-        </h3>
-        <p className='pb-3 lg:text-lg max-w-2xl'>
-          We're build a home for the next generation vinyl lovers and cassette
-          junkies. Get in front of fans, connect with artists, labels and
-          stores.
-        </p>
+        <h3 className='font-bold text-3xl lg:text-4xl my-7'>{t('subTitle')}</h3>
+        <p className='pb-3 lg:text-lg max-w-2xl'>{t('body')}</p>
         <button className='font-bold text-xs md:text-base md:w-[40%] uppercase rounded-full border-2 border-black w-full py-3 mt-8 mb-20'>
-          Browse Artists
+          {t('browseArtists')}
         </button>
       </div>
 

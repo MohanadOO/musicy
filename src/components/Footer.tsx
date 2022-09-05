@@ -1,20 +1,19 @@
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
 
+import { useTranslation } from 'react-i18next'
+
 export default function Footer() {
+  const { t } = useTranslation('translation', { keyPrefix: 'footer' })
   return (
     <footer className='bg-black text-white flex flex-col items-center text-center pt-24 pb-5 lg:px-10 xl:px-20 '>
       <div className='mx-5 sm:mx-12 flex flex-col items-center'>
         <h2 className='text-xs uppercase inline-block py-2 px-5 border-2 border-white'>
-          MusicY Studio
+          {t('title')}
         </h2>
         <h3 className='font-bold text-2xl sm:text-4xl lg:text-5xl my-7 mx-10 max-w-xs lg:max-w-sm'>
-          Make it real with MusicY Studio
+          {t('subTitle')}
         </h3>
-        <p className='md:mx-36 lg:text-xl lg:max-w-lg'>
-          Design the look and feel of your vinyl and cassette and use the profit
-          calculator to immediately see how much your project will cost, and how
-          much you'll earn.
-        </p>
+        <p className='md:mx-36 lg:text-xl lg:max-w-lg'>{t('body')}</p>
         <div className='max-w-full my-12'>
           <svg
             className='bg-white p-3 rounded-md '
@@ -82,7 +81,7 @@ export default function Footer() {
           </svg>
         </div>
         <button className='uppercase bg-yellow w-full text-black p-4 rounded-full font-bold text-xs md:text-base md:w-[50%]'>
-          Try it now
+          {t('tryItNow')}
         </button>
       </div>
       <nav
@@ -90,77 +89,77 @@ export default function Footer() {
         aria-label='Footer Navigation'
       >
         <ul className='flex flex-wrap self-start w-full mt-12 px-5 gap-x-24 gap-y-12 child:flex-1 font-bold text-left'>
-          <ul aria-label='For Artists'>
-            <li className='mb-5 uppercase'>For Artists</li>
+          <ul aria-label={t('forArtists.title')}>
+            <li className='mb-5 uppercase'>{t('forArtists.title')}</li>
             <li>
-              <a href='#'>Why MuesicY?</a>
+              <a href='#'>{t('forArtists.whyMusicy')}</a>
             </li>
             <li>
-              <a href='#'>Crowdfunding</a>
+              <a href='#'>{t('forArtists.crowdfunding')}</a>
             </li>
             <li>
-              <a href='#'>Press & Sell</a>
+              <a href='#'>{t('forArtists.pressSell')}</a>
             </li>
             <li>
-              <a href='#'>Our Services & Sell</a>
+              <a href='#'>{t('forArtists.ourServices')}</a>
             </li>
             <li>
-              <a href='#'>Artist Toolkit</a>
+              <a href='#'>{t('forArtists.artistToolkit')}</a>
             </li>
             <li>
-              <a href='#'>Referral Program</a>
+              <a href='#'>{t('forArtists.referralProgram')}</a>
             </li>
           </ul>
 
-          <ul aria-label='For Fans'>
-            <li className='mb-5 uppercase'>For Fans</li>
+          <ul aria-label={t('forFans.title')}>
+            <li className='mb-5 uppercase'>{t('forFans.title')}</li>
             <li>
-              <a href='#'>Discover</a>
+              <a href='#'>{t('forFans.discover')}</a>
             </li>
             <li>
-              <a href='#'>Records</a>
+              <a href='#'>{t('forFans.records')}</a>
             </li>
             <li>
-              <a href='#'>Stories</a>
+              <a href='#'>{t('forFans.stories')}</a>
             </li>
             <li>
-              <a href='#'>Lists</a>
+              <a href='#'>{t('forFans.lists')}</a>
             </li>
             <li>
-              <a href='#'>Artists & Labels</a>
+              <a href='#'>{t('forFans.artistsLabel')}</a>
             </li>
           </ul>
         </ul>
 
         <ul
-          aria-label='Our Company'
+          aria-label={t('ourCompany.title')}
           className='flex flex-wrap self-start w-full mt-12 px-5 gap-x-24 gap-y-12 child:flex-1 font-bold text-left'
         >
           <ul>
-            <li className='mb-5 uppercase'>Our Company</li>
+            <li className='mb-5 uppercase'>{t('ourCompany.title')}</li>
             <li>
-              <a href='#'>About MuesicY</a>
+              <a href='#'>{t('ourCompany.about')}</a>
             </li>
             <li>
-              <a href='#'>Careers</a>
+              <a href='#'>{t('ourCompany.careers')}</a>
             </li>
             <li>
-              <a href='#'>Partners</a>
+              <a href='#'>{t('ourCompany.partners')}</a>
             </li>
           </ul>
-          <ul>
-            <li className='mb-5 uppercase'>Help</li>
+          <ul aria-label={t('help.title')}>
+            <li className='mb-5 uppercase'>{t('help.title')}</li>
             <li>
-              <a href='#'>Support Center</a>
+              <a href='#'>{t('help.supportCenter')}</a>
             </li>
             <li>
-              <a href='#'>Contact Us</a>
+              <a href='#'>{t('help.contactUs')}</a>
             </li>
             <li>
-              <a href='#'>Returns</a>
+              <a href='#'>{t('help.returns')}</a>
             </li>
             <li>
-              <a href='#'>Shipping</a>
+              <a href='#'>{t('help.shipping')}</a>
             </li>
           </ul>
         </ul>
@@ -185,17 +184,17 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-          <ul className='self-start w-full justify-around lg:justify-end lg:gap-5 xl:gap-10 text-xs xl:text-sm font-bold mt-8 hidden lg:flex'>
+          <ul className='self-start w-full justify-around lg:justify-end lg:gap-2 xl:gap-10 text-xs xl:text-sm font-bold mt-8 hidden lg:flex'>
             <li>
-              <a href='#'>Terms of Service</a>
+              <a href='#'>{t('termsOfService')}</a>
             </li>
             <li>
-              <a href='#'>Privacy Policy</a>
+              <a href='#'>{t('privacyPolicy')}</a>
             </li>
             <li>
-              <a href='#'>Legal Information</a>
+              <a href='#'>{t('legalInfo')}</a>
             </li>
-            <li>Made By Mohanad ♥</li>
+            <li className='text-yellow'>{t('made')}</li>
           </ul>
         </div>
         <div>
@@ -268,16 +267,16 @@ export default function Footer() {
 
       <ul className='flex flex-wrap gap-5 self-start w-full justify-around text-xs font-bold mt-8 lg:hidden'>
         <li>
-          <a href='#'>Terms of Service</a>
+          <a href='#'>{t('termsOfService')}</a>
         </li>
         <li>
-          <a href='#'>Privacy Policy</a>
+          <a href='#'>{t('privacyPolicy')}</a>
         </li>
         <li>
-          <a href='#'>Legal Information</a>
+          <a href='#'>{t('legalInfo')}</a>
         </li>
       </ul>
-      <p className='text-xs mt-5 lg:hidden'>Made By Mohanad ♥</p>
+      <p className='text-xs mt-5 lg:hidden text-yellow'>{t('made')}</p>
     </footer>
   )
 }

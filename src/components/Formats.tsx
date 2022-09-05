@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Formats() {
+  const { t } = useTranslation('translation', { keyPrefix: 'formats' })
+
   return (
     <section aria-labelledby='formats' className='font-bold'>
       <header>
@@ -6,7 +10,7 @@ export default function Formats() {
           id='formats'
           className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-20 px-3 mx-auto max-w-2xl'
         >
-          Choose from two formats and three project types.
+          {t('title')}
         </h2>
       </header>
 
@@ -23,15 +27,10 @@ export default function Formats() {
             </picture>
           </div>
           <p className='text-xs lg:text-base uppercase border border-black inline-block py-2 px-3 bg-white'>
-            Circle Vinyl
+            {t('circleVinyl')}
           </p>
-          <h3 className='text-4xl lg:text-5xl'>Vinyl</h3>
-          <p className='text-center lg:text-lg max-w-2xl'>
-            We know how special pressed records are to you. Our products are
-            built for fans, by fans. We make it easy for artists to press vinyl,
-            so the music you love can keep reaching ears in the most beautiful
-            way.
-          </p>
+          <h3 className='text-4xl lg:text-5xl'>{t('vinyl')}</h3>
+          <p className='text-center lg:text-lg max-w-2xl'>{t('vinylBody')}</p>
         </div>
         <div className='flex flex-col gap-7 items-center bg-green pt-10 pb-24 px-5 sm:px-10'>
           <div className='w-full md:w-[70%] lg:order-1'>
@@ -45,25 +44,20 @@ export default function Formats() {
             </picture>
           </div>
           <p className='text-xs lg:text-base uppercase border border-black inline-block py-2 px-3 bg-white'>
-            RECTANGLE PLASTIC
+            {t('rectanglePlastic')}
           </p>
-          <h3 className='text-4xl lg:text-5xl'>Cassette</h3>
+          <h3 className='text-4xl lg:text-5xl'>{t('cassette')}</h3>
           <p className='text-center lg:text-lg max-w-2xl'>
-            Cassettes have always been special to music fans and artists.
-            Whether you are saving a recording of a great concert, or preserving
-            an early demo, there’s no better way to keep that music close than
-            on cassette tapes.
+            {t('cassetteBody')}
           </p>
         </div>
       </div>
 
       <div className='my-12'>
         <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-6 sm:mx-24'>
-          Find your fit
+          {t('findFitTitle')}
         </h2>
-        <p className='text-center lg:text-lg mx-10'>
-          Choose the best MuesicY project type to suit your needs ↓
-        </p>
+        <p className='text-center lg:text-lg mx-10'>{t('findFitBody')}</p>
       </div>
 
       <div className='lg:flex child:border child:border-black child:flex-1'>
@@ -79,15 +73,14 @@ export default function Formats() {
             </picture>
           </div>
           <p className='text-xs lg:text-base uppercase inline-block py-2 px-3 bg-white border border-black'>
-            NO RISK, NO WASTE
+            {t('crowdfundingTitle')}
           </p>
-          <h3 className='text-4xl lg:text-5xl'>Crowdfunding</h3>
-          <p className='text-center max-w-2xl'>
-            Rally your fans and gather pledges. Press the exact number of
-            records you need, without having to pay anything upfront.
+          <h3 className='text-4xl lg:text-5xl'>{t('crowdfunding')}</h3>
+          <p className='text-center lg:text-lg max-w-2xl'>
+            {t('crowdfundingBody')}
           </p>
           <button className='bg-black text-white lg:order-3 w-full md:w-[40%] rounded-full p-3 text-xs md:text-base uppercase'>
-            Learn More
+            {t('learnMore')}
           </button>
         </div>
 
@@ -103,30 +96,28 @@ export default function Formats() {
             </picture>
           </div>
           <p className='text-xs lg:text-base uppercase border border-black inline-block py-2 px-3 bg-white'>
-            GET INTO IT
+            {t('preOrderTitle')}
           </p>
-          <h3 className='text-4xl lg:text-5xl'>Pre-order</h3>
+          <h3 className='text-4xl lg:text-5xl'>{t('preOrder')}</h3>
           <p className='text-center lg:text-lg max-w-2xl'>
-            Put your music on physical, sooner. Take pre-orders from fans and
-            we'll take care of the rest.
+            {t('preOrderBody')}
           </p>
           <button className='bg-black text-white lg:order-3 w-full md:w-[40%] rounded-full p-3 text-xs md:text-base uppercase'>
-            Learn More
+            {t('learnMore')}
           </button>
         </div>
       </div>
 
       <div className='flex flex-col lg:flex-row lg:justify-center gap-7 items-center bg-black text-white pt-10 pb-24 lg:py-20  px-5 sm:px-10'>
-        <p className='text-center lg:text-xl max-w-2xl lg:text-left'>
-          Just after straight up vinyl pressing or cassette duplication? We do
-          that too. Tell us where and we'll ship in bulk to wherever you need.
+        <p className='text-center lg:text-xl max-w-2xl lg:text-left rtl:lg:text-right'>
+          {t('startProjectBody')}
         </p>
         <a
           href='#'
           target='_blank'
           className='underline text-sm lg:text-lg uppercase'
         >
-          Start a press only project
+          {t('startProject')}
         </a>
       </div>
     </section>

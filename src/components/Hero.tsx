@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Hero() {
+  const { t } = useTranslation('translation', { keyPrefix: 'hero' })
   return (
     <section aria-labelledby='hero' className='mt-20 font-bold overflow-hidden'>
       <div className='lg:flex lg:gap-10 lg:mx-10 child:flex-1'>
@@ -7,16 +10,13 @@ export default function Hero() {
             id='hero'
             className='text-sm uppercase border border-black inline-block p-2'
           >
-            Why MusicY
+            {t('whyMusicy')}
           </h1>
           <h2 className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl my-5'>
-            Music in your hands.
-            <span className='block'>Without the barriers.</span>
+            {t('title1')}
+            <span className='block'>{t('title2')}</span>
           </h2>
-          <p className='sm:text-lg md:text-xl lg:text-2xl'>
-            Full-service production, a global retail network, customer support -
-            and you keep up to 85% of profits.
-          </p>
+          <p className='sm:text-lg md:text-xl lg:text-2xl'>{t('body')}</p>
         </header>
         <div className='my-14 lg:mb-0 lg:mt-7 xl:mt-12 flex flex-col lg:mr-16'>
           <picture>

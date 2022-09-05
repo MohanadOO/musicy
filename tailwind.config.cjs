@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        raleway: ['Raleway', 'sans-serif'],
+        raleway: ['Raleway', 'Tajawal', 'sans-serif'],
       },
       colors: {
         yellow: '#FFF804',

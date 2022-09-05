@@ -1,0 +1,111 @@
+{
+  "navigation": {
+    "records": "New Records",
+    "discover": "discover",
+    "forArtist": "For Artist",
+    "whyMusicy": "Why MusicY?",
+    "crowdfunding": "Crowdfunding",
+    "pressSell": "Press & Sell",
+    "ourServices": "Our Services",
+    "artistToolkit": "Artist Toolkit",
+    "referralProgram": "Referral Program",
+    "ourCompany": "Our Company",
+    "aboutMusicy": "About MusicY",
+    "careers": "Careers",
+    "partners": "Partners",
+    "contact": "Contact",
+    "login": "Log in",
+    "makeYourOwn": "Make Your Own",
+    "makeRecord": "Make a record"
+  },
+  "hero": {
+    "whyMusicy": "Why MusicY",
+    "title1": "Music in your hands",
+    "title2": "Without the barriers.",
+    "body": "Full-service production, a global retail network, customer support - and you keep up to 85% of profits."
+  },
+  "formats": {
+    "title": "Choose from two formats and three project types.",
+    "rectanglePlastic": "Rectangle Plastic",
+    "cassette": "Cassette",
+    "cassetteBody": "Cassettes have always been special to music fans and artists. Whether you are saving a recording of a great concert, or preserving an early demo, there’s no better way to keep that music close than on cassette tapes.",
+    "circleVinyl": "Circle Vinyl",
+    "vinyl": "Vinyl",
+    "vinylBody": "We know how special pressed records are to you. Our products are built for fans, by fans. We make it easy for artists to press vinyl, so the music you love can keep reaching ears in the most beautiful way.",
+    "findFitTitle": "Find your fit",
+    "findFitBody": "Choose the best MusicY project type to suit your needs ↓",
+    "preOrder": "Get Into It",
+    "preOrderTitle": "Pre-order",
+    "preOrderBody": "Put your music on physical, sooner. Take pre-orders from fans and we'll take care of the rest.",
+    "crowdfunding": "Crowdfunding",
+    "crowdfundingTitle": "No Risk, No Waste",
+    "crowdfundingBody": "Rally your fans and gather pledges. Press the exact number of records you need, without having to pay anything upfront.",
+    "learnMore": "Learn more",
+    "startProject": "Start a press only project",
+    "startProjectBody": "Just after straight up vinyl pressing or cassette duplication? We do that too. Tell us where and we'll ship in bulk to wherever you need."
+  },
+  "services": {
+    "title": "Our Services",
+    "subTitle1": "You make Music",
+    "subTitle2": "We Do the rest",
+    "body": "We want you to be able to put all your energy into the creative side of making music. So we created a one-stop shop for everything else.",
+    "learnMore": "Learn More",
+    "makingRecords": "Making Records & Cassettes",
+    "designCustomization": "Design & Customization",
+    "designCustomizationBody": "With over 39 colors and over 120,000 variations, control what your record will look like.",
+    "retailNetworkTitle": "Retail network",
+    "retailNetworkSubTitle1": "Worldwide distro,",
+    "retailNetworkSubTitle2": "demystified.",
+    "retailNetworkBody": "Get direct access to over 150 of our retail partners across the globe.",
+    "customerSupportTitle": "Customer Support",
+    "customerSupportSubTitle1": "Here to help,",
+    "customerSupportSubTitle2": "whenever you need it.",
+    "customerSupportBody": "Whether you’re an artist in the middle of product, or a fan with questions about your order; our team is here to help."
+  },
+  "community": {
+    "title": "Community",
+    "subTitle": "Join a growing community",
+    "body": "We're build a home for the next generation vinyl lovers and cassette junkies. Get in front of fans, connect with artists, labels and stores.",
+    "browseArtists": "Browse Artists"
+  },
+  "footer": {
+    "title": "MusicY Studio",
+    "subTitle": "Make it real with MusicY Studio",
+    "body": "Design the look and feel of your vinyl and cassette and use the profit calculator to immediately see how much your project will cost, and how much you'll earn.",
+    "tryItNow": "Try It Now",
+    "forArtists": {
+      "title": "For Artists",
+      "whyMusicy": "Why MusicY?",
+      "crowdfunding": "Crowdfunding",
+      "pressSell": "Press & Sell",
+      "ourServices": "Our Services",
+      "artistToolkit": "Artist Toolkit",
+      "referralProgram": "Referral Program"
+    },
+    "forFans": {
+      "title": "For Fans",
+      "discover": "Discover",
+      "records": "Records",
+      "stories": "Stories",
+      "lists": "Lists",
+      "artistsLabel": "Artists & Label"
+    },
+    "ourCompany": {
+      "title": "Our Company",
+      "about": "About MusicY",
+      "careers": "Careers",
+      "partners": "Partners"
+    },
+    "help": {
+      "title": "Help",
+      "supportCenter": "Support Center",
+      "contactUs": "Contact Us",
+      "returns": "Returns",
+      "shipping": "Shipping"
+    },
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "legalInfo": "Legal Information",
+    "made": "Made by Mohanad 💜"
+  }
+}
