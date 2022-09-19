@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import {
   HiChevronDown,
   HiOutlineMenu,
@@ -6,7 +6,7 @@ import {
   HiOutlineShoppingCart,
 } from 'react-icons/hi'
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
-import { Menu } from '@headlessui/react'
+import { Menu, Transition } from '@headlessui/react'
 
 import { useTranslation } from 'react-i18next'
 
@@ -118,28 +118,37 @@ export default function Nav() {
                       />
                     </div>
                   </Menu.Button>
-                  <Menu.Items className='absolute flex flex-col gap-3 mt-3 bg-black w-48 py-3 px-3 text-white text-lg 2xl:text-xl capitalize z-10'>
-                    <Menu.Item>
-                      <a href='#' className='underline underline-offset-4'>
-                        {t('whyMusicy')}
-                      </a>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <a href='#'>{t('crowdfunding')}</a>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <a href='#'>{t('pressSell')}</a>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <a href='#'>{t('ourServices')}</a>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <a href='#'>{t('artistToolkit')}</a>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <a href='#'>{t('referralProgram')}</a>
-                    </Menu.Item>
-                  </Menu.Items>
+                  <Transition
+                    enter='transition duration-200 ease-out'
+                    enterFrom='transform scale-90 opacity-0'
+                    enterTo='transform scale-100 opacity-100'
+                    leave='transition duration-75 ease-out'
+                    leaveFrom='transform scale-100 opacity-100'
+                    leaveTo='transform opacity-0'
+                  >
+                    <Menu.Items className='absolute flex flex-col gap-3 mt-3 bg-black w-48 py-3 px-3 text-white text-lg 2xl:text-xl capitalize z-10'>
+                      <Menu.Item>
+                        <a href='#' className='underline underline-offset-4'>
+                          {t('whyMusicy')}
+                        </a>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <a href='#'>{t('crowdfunding')}</a>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <a href='#'>{t('pressSell')}</a>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <a href='#'>{t('ourServices')}</a>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <a href='#'>{t('artistToolkit')}</a>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <a href='#'>{t('referralProgram')}</a>
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
                 </>
               )}
             </Menu>
@@ -158,20 +167,29 @@ export default function Nav() {
                       />
                     </div>
                   </Menu.Button>
-                  <Menu.Items className='absolute flex flex-col gap-3 mt-3 bg-black w-48 py-3 px-3 text-white text-lg 2xl:text-xl capitalize z-10'>
-                    <Menu.Item>
-                      <a href='#'>{t('aboutMusicy')}</a>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <a href='#'>{t('careers')}</a>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <a href='#'>{t('partners')}</a>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <a href='#'>{t('contact')}</a>
-                    </Menu.Item>
-                  </Menu.Items>
+                  <Transition
+                    enter='transition duration-200 ease-out'
+                    enterFrom='transform scale-95 opacity-0'
+                    enterTo='transform scale-100 opacity-100'
+                    leave='transition duration-75 ease-out'
+                    leaveFrom='transform scale-100 opacity-100'
+                    leaveTo='transform opacity-0'
+                  >
+                    <Menu.Items className='absolute flex flex-col gap-3 mt-3 bg-black w-48 py-3 px-3 text-white text-lg 2xl:text-xl capitalize z-10'>
+                      <Menu.Item>
+                        <a href='#'>{t('aboutMusicy')}</a>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <a href='#'>{t('careers')}</a>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <a href='#'>{t('partners')}</a>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <a href='#'>{t('contact')}</a>
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
                 </>
               )}
             </Menu>
@@ -217,7 +235,16 @@ export default function Nav() {
           </li>
         </ul>
 
-        {openMenu ? (
+        <Transition
+          show={openMenu}
+          as={Fragment}
+          enter='transition duration-100 ease-out'
+          enterFrom='transform scale-95 opacity-0'
+          enterTo='transform scale-100 opacity-100'
+          leave='transition duration-75 ease-out'
+          leaveFrom='transform scale-100 opacity-100'
+          leaveTo='transform scale-95 opacity-0'
+        >
           <div className='absolute border-t-black pt-10 border-2 flex lg:hidden flex-col left-0 right-0 top-24 bg-white text-black z-10'>
             <ul className='flex flex-col gap-6 mx-5 sm:mx-10 mb-10 text-xl sm:text-3xl font-bold child:uppercase'>
               <li>
@@ -242,28 +269,40 @@ export default function Nav() {
                           </div>
                         </Menu.Button>
                       </div>
-                      <Menu.Items className='flex flex-col gap-3 py-3 px-3 text-xl sm:text-2xl capitalize'>
-                        <Menu.Item>
-                          <a href='#' className='underline underline-offset-4'>
-                            {t('whyMusicy')}
-                          </a>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <a href='#'>{t('crowdfunding')}</a>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <a href='#'>{t('pressSell')}</a>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <a href='#'>{t('ourServices')}</a>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <a href='#'>{t('artistToolkit')}</a>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <a href='#'>{t('referralProgram')}</a>
-                        </Menu.Item>
-                      </Menu.Items>
+                      <Transition
+                        enter='transition duration-100 ease-out'
+                        enterFrom='transform scale-95 opacity-0'
+                        enterTo='transform scale-100 opacity-100'
+                        leave='transition duration-75 ease-out'
+                        leaveFrom='transform scale-100 opacity-100'
+                        leaveTo='transform opacity-0'
+                      >
+                        <Menu.Items className='flex flex-col gap-3 py-3 px-3 text-xl sm:text-2xl capitalize'>
+                          <Menu.Item>
+                            <a
+                              href='#'
+                              className='underline underline-offset-4'
+                            >
+                              {t('whyMusicy')}
+                            </a>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <a href='#'>{t('crowdfunding')}</a>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <a href='#'>{t('pressSell')}</a>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <a href='#'>{t('ourServices')}</a>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <a href='#'>{t('artistToolkit')}</a>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <a href='#'>{t('referralProgram')}</a>
+                          </Menu.Item>
+                        </Menu.Items>
+                      </Transition>
                     </>
                   )}
                 </Menu>
@@ -284,20 +323,29 @@ export default function Nav() {
                           </div>
                         </Menu.Button>
                       </div>
-                      <Menu.Items className='flex flex-col gap-3 py-3 px-3 text-xl sm:text-2xl capitalize'>
-                        <Menu.Item>
-                          <a href='#'>{t('aboutMusicy')}</a>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <a href='#'>{t('careers')}</a>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <a href='#'>{t('partners')}</a>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <a href='#'>{t('contact')}</a>
-                        </Menu.Item>
-                      </Menu.Items>
+                      <Transition
+                        enter='transition duration-100 ease-out'
+                        enterFrom='transform scale-95 opacity-0'
+                        enterTo='transform scale-100 opacity-100'
+                        leave='transition duration-75 ease-out'
+                        leaveFrom='transform scale-100 opacity-100'
+                        leaveTo='transform opacity-0'
+                      >
+                        <Menu.Items className='flex flex-col gap-3 py-3 px-3 text-xl sm:text-2xl capitalize'>
+                          <Menu.Item>
+                            <a href='#'>{t('aboutMusicy')}</a>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <a href='#'>{t('careers')}</a>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <a href='#'>{t('partners')}</a>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <a href='#'>{t('contact')}</a>
+                          </Menu.Item>
+                        </Menu.Items>
+                      </Transition>
                     </>
                   )}
                 </Menu>
@@ -335,9 +383,7 @@ export default function Nav() {
               </a>
             </div>
           </div>
-        ) : (
-          ''
-        )}
+        </Transition>
       </nav>
     </header>
   )
