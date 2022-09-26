@@ -13,7 +13,7 @@ export default function () {
   return (
     <section
       aria-labelledby='community'
-      className='flex flex-col items-center text-center pt-0 font-bold'
+      className='flex flex-col items-center text-center pt-0 font-bold overflow-hidden'
     >
       <motion.header
         variants={communityVariants}
