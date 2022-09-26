@@ -22,7 +22,7 @@ Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - Site will use the Arabic language if the user system is an Arabic and user can change the language any time.
-- Using <picture> tag to include the picture in multiple formats depending on the browser to optimize and minimize pictures size.
+- Using `picture` tag to include the picture in multiple formats depending on the browser to optimize and minimize pictures size.
 - Animation appears depending on the viewport.
 
 ### Screenshot
